@@ -7,17 +7,13 @@ pragma solidity ^0.4.19;
  */
 contract Ownable {
   address public owner;
-
-  event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);
-
   /**
    * @dev The Ownable constructor sets the original `owner` of the contract to the sender
    * account.
    */
-  function Ownable() public {
-    owner = msg.sender;
-  }
-
+    constructor() public {
+        owner = msg.sender;
+    }
 
   /**
    * @dev Throws if called by any account other than the owner.
